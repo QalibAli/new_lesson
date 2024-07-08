@@ -21,7 +21,13 @@ class HomeScreen extends StatelessWidget {
           size: 39,
         ),
         actions: const [
-         
+          Padding(
+            padding: EdgeInsets.symmetric(horizontal: 10),
+            child: Icon(
+              Icons.verified_outlined,
+              size: 39,
+            ),
+          ),
           Padding(
             padding: EdgeInsets.symmetric(horizontal: 10),
             child: Icon(
