@@ -6,4 +6,6 @@ class AppTexts {
   static const welcomeHeaderText = "Discover Your Dream Job here";
   static const welcomSubtitleText =
       " Explore all the existing job roles based on your interest and study major";
+
+  static const email = 'Email';
 }

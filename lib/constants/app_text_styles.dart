@@ -20,4 +20,10 @@ class AppTextStyles {
     fontWeight: FontWeight.w400,
     color: AppColors.black,
   );
+
+  static const hintStyle = TextStyle(
+    color: AppColors.hintColor,
+    fontSize: 16,
+    fontWeight: FontWeight.w500,
+  );
 }
