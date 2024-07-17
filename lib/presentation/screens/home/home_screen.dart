@@ -1,4 +1,4 @@
-import 'package:first_lesson/constants/app_color.dart';
+import 'package:first_lesson/utils/constants/app_color.dart';
 import 'package:flutter/material.dart';
 
 class HomeScreen extends StatelessWidget {

@@ -1,5 +1,5 @@
-import 'package:first_lesson/constants/app_assets.dart';
-import 'package:first_lesson/constants/app_paddings.dart';
+import 'package:first_lesson/utils/constants/app_assets.dart';
+import 'package:first_lesson/utils/constants/app_paddings.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 

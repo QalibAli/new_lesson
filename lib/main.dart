@@ -1,4 +1,6 @@
+import 'package:first_lesson/presentation/screens/controller/controller_screen.dart';
 import 'package:first_lesson/presentation/screens/welcome/welcome_screen.dart';
+import 'package:first_lesson/utils/pager/pager.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -17,7 +19,8 @@ class MyApp extends StatelessWidget {
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
         useMaterial3: true,
       ),
-      home: const WelcomeScreen(),
+      home: Pager.login,
     );
   }
 }
+//rooter

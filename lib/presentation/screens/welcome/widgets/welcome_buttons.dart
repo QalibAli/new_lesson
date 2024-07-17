@@ -1,9 +1,11 @@
-import 'package:first_lesson/constants/app_color.dart';
-import 'package:first_lesson/constants/app_paddings.dart';
-import 'package:first_lesson/constants/app_texts.dart';
+import 'package:first_lesson/utils/constants/app_color.dart';
+import 'package:first_lesson/utils/constants/app_paddings.dart';
+import 'package:first_lesson/utils/constants/app_rooter.dart';
+import 'package:first_lesson/utils/constants/app_texts.dart';
 import 'package:first_lesson/presentation/screens/login/login_screen.dart';
 import 'package:first_lesson/presentation/screens/register/register_screen.dart';
 import 'package:first_lesson/presentation/widgets/global_button.dart';
+import 'package:first_lesson/utils/pager/pager.dart';
 import 'package:flutter/material.dart';
 
 class WelcomeButtons extends StatelessWidget {
@@ -25,12 +27,7 @@ class WelcomeButtons extends StatelessWidget {
                   backgroundColor: AppColors.blue,
                   foregroundColor: AppColors.white,
                   onPressed: () {
-                    Navigator.pushReplacement(
-                      context,
-                      MaterialPageRoute(
-                        builder: (context) => const LoginScreen(),
-                      ),
-                    );
+                    AppRooter.push(context, Pager.login);
                   },
                 ),
                 const SizedBox(
@@ -41,11 +38,9 @@ class WelcomeButtons extends StatelessWidget {
                   backgroundColor: AppColors.white,
                   foregroundColor: AppColors.black,
                   onPressed: () {
-                    Navigator.pushReplacement(
+                    AppRooter.push(
                       context,
-                      MaterialPageRoute(
-                        builder: (context) => const RegisterScreen(),
-                      ),
+                      Pager.register,
                     );
                   },
                 ),

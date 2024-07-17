@@ -1,6 +1,6 @@
-import 'package:first_lesson/constants/app_paddings.dart';
-import 'package:first_lesson/constants/app_text_styles.dart';
-import 'package:first_lesson/constants/app_texts.dart';
+import 'package:first_lesson/utils/constants/app_paddings.dart';
+import 'package:first_lesson/utils/constants/app_text_styles.dart';
+import 'package:first_lesson/utils/constants/app_texts.dart';
 import 'package:flutter/material.dart';
 
 class WelcomeTexts extends StatelessWidget {
