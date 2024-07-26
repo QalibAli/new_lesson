@@ -8,7 +8,7 @@ class ControllerScreen extends StatefulWidget {
 }
 
 class _ControllerScreenState extends State<ControllerScreen> {
-  final controller = TextEditingController();
+  final textController = TextEditingController();
   late String text = '';
 
   @override
@@ -18,14 +18,15 @@ class _ControllerScreenState extends State<ControllerScreen> {
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
           TextFormField(
-            controller: controller,
+            controller: textController,
             decoration: const InputDecoration(
               hintText: "Username",
             ),
           ),
           ElevatedButton(
               onPressed: () {
-                text = controller.text;
+                text = textController.text;
+                // print(textController.text);
                 setState(() {});
               },
               child: const Text("write text")),

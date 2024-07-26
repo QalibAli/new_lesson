@@ -1,4 +1,6 @@
+import 'package:first_lesson/data/model/users_model.dart';
 import 'package:first_lesson/utils/constants/app_color.dart';
+import 'package:first_lesson/utils/constants/app_paddings.dart';
 import 'package:flutter/material.dart';
 
 class HomeScreen extends StatelessWidget {
@@ -6,36 +8,52 @@ class HomeScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final users = UsersModel.users;
     return Scaffold(
-      appBar: AppBar(
-        title: const Text("Flutter First Lesson"),
-        titleTextStyle: const TextStyle(
-          fontSize: 24,
-          fontWeight: FontWeight.w500,
-          color: AppColors.blue,
-        ),
-        backgroundColor: Colors.green,
-        foregroundColor: AppColors.blue,
-        leading: const Icon(
-          Icons.menu,
-          size: 39,
-        ),
-        actions: const [
-          Padding(
-            padding: EdgeInsets.symmetric(horizontal: 10),
-            child: Icon(
-              Icons.verified_outlined,
-              size: 39,
+      body: ListView.builder(
+        itemCount: users.length,
+        // scrollDirection: Axis.horizontal,
+        // physics: const NeverScrollableScrollPhysics(),
+        itemBuilder: (context, index) {
+          final user = users[index];
+          return Container(
+            height: 70,
+            width: MediaQuery.of(context).size.width,
+            margin: AppPaddings.h22v22,
+            decoration: const BoxDecoration(
+              borderRadius: BorderRadius.all(Radius.circular(12)),
+              color: AppColors.white,
             ),
-          ),
-          Padding(
-            padding: EdgeInsets.symmetric(horizontal: 10),
-            child: Icon(
-              Icons.verified_outlined,
-              size: 39,
+            child: Padding(
+              padding: AppPaddings.all6,
+              child: Row(
+                children: [
+                  Container(
+                    width: 50,
+                    height: 50,
+                    decoration: BoxDecoration(
+                      image: DecorationImage(
+                        image: AssetImage(user.profilePhoto),
+                      ),
+                    ),
+                  ),
+                  const SizedBox(
+                    width: 10,
+                  ),
+                  Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      Text(user.username),
+                      Text(user.jobName),
+                    ],
+                  ),
+                  const Spacer(),
+                  Icon(user.icon , color: user.color,),
+                ],
+              ),
             ),
-          ),
-        ],
+          );
+        },
       ),
     );
   }

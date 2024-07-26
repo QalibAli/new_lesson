@@ -7,24 +7,25 @@ class GlobalInputWidget extends StatelessWidget {
   const GlobalInputWidget({
     super.key,
     required this.hintText,
+    required this.obscureText,
     required this.controller,
-    required this.validator, required this.obscureText,
+    required this.validator,
   });
 
   final String hintText;
+  final bool obscureText;
   final TextEditingController controller;
   final String? Function(String?)? validator;
-  final bool obscureText;
 
   @override
   Widget build(BuildContext context) {
     return Padding(
       padding: AppPaddings.lr22,
       child: TextFormField(
-        obscureText: obscureText,
-        style: AppTextStyles.r14bl,
         controller: controller,
         validator: validator,
+        obscureText: obscureText,
+        style: AppTextStyles.r14bl,
         decoration: InputDecoration(
           fillColor: AppColors.fillColor,
           filled: true,

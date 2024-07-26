@@ -2,10 +2,8 @@ import 'package:first_lesson/utils/constants/app_color.dart';
 import 'package:first_lesson/utils/constants/app_paddings.dart';
 import 'package:first_lesson/utils/constants/app_rooter.dart';
 import 'package:first_lesson/utils/constants/app_texts.dart';
-import 'package:first_lesson/presentation/screens/login/login_screen.dart';
-import 'package:first_lesson/presentation/screens/register/register_screen.dart';
 import 'package:first_lesson/presentation/widgets/global_button.dart';
-import 'package:first_lesson/utils/pager/pager.dart';
+import 'package:first_lesson/utils/helper/pager.dart';
 import 'package:flutter/material.dart';
 
 class WelcomeButtons extends StatelessWidget {
