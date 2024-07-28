@@ -26,4 +26,22 @@ class AppTextStyles {
     fontSize: 16,
     fontWeight: FontWeight.w500,
   );
+
+  static const b24b = TextStyle(
+    color: AppColors.black,
+    fontSize: 24,
+    fontWeight: FontWeight.bold,
+  );
+
+  static const dateTexstyle = TextStyle(
+    color: AppColors.black,
+    fontSize: 14,
+    fontWeight: FontWeight.bold,
+  );
+
+  static const p16b = TextStyle(
+    color: AppColors.purple,
+    fontSize: 16,
+    fontWeight: FontWeight.bold,
+  );
 }
